@@ -5,9 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import selectinload
 
-from db.models.model_native_chess_user import NativeChessProfile
 from pydantic_schemas.users_schema import UserCreateRequest
-from db.models.model_users import Account, User
 from api.utils.dependancies import bcrypt_context
 
 # async def create_user_using_foreign_usernmae(db : AsyncSession , user " UserCreateRequest):

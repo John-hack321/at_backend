@@ -4,8 +4,7 @@ from fastapi.middleware.cors import  CORSMiddleware
 
 from db.db_setup import Base , engine
 from db.db_setup import create_database , drop_database
-from api import  api_auth , api_users , api_transactions , api_chess_foreign , api_games
-from sockets.connection_manager import sio_app
+from api import  api_addtimetable, api_auth 
 
 app = FastAPI(
     # we will add system info here for later on 
@@ -29,7 +28,4 @@ app.add_middleware(
 )
 
 app.include_router(api_auth.router)
-app.include_router(api_users.router)
-app.include_router(api_transactions.router)
-app.include_router(api_chess_foreign.router)
-app.include_router(api_games.router)
+app.include_router(api_addtimetable.router)

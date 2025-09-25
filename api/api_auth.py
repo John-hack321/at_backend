@@ -14,11 +14,8 @@ import logging
 
 from dotenv import load_dotenv
 from api.utils.dependancies import ALGORITHM, SECRET_KEY, bcrypt_context , db_dependancy , refresh_user_dependancy
-from db.models.model_users import User
-from services.chess_services.chess_playsers import ChessPlayerService
 from pydantic_schemas.users_schema import Token , UserCreateRequest
 from api.utils.util_users import create_user , get_user_by_username , get_user_by_email
-from api.utils.util_chess_players import add_new_chess_player
 
 load_dotenv()
 logger = logging.getLogger(__name__)
